@@ -11,18 +11,20 @@
 
 <body>
     <nav class="navigation" id="navigation">
-        <div class="logo">BM</div>
+        <div class="logo">
+            <span>BM</span>
+        </div>
         <div class="menu">
-            <a href="">
+            <a href="#">
                 <span><i class="fas fa-home"></i></span>
             </a>
-            <a href="">
+            <a href="#">
                 <span><i class="fas fa-user-alt"></i></span>
             </a>
-            <a href="">
+            <a href="#">
                 <span><i class="fas fa-briefcase"></i></span>
             </a>
-            <a href="">
+            <a href="#">
                 <span><i class="fas fa-envelope"></i></span>
             </a>
         </div>
@@ -35,31 +37,31 @@
             </a>
         </div>
     </nav>
-
-    <div class="home" id="home">
-        <h1>Hello,<br> I'm Bartek Mogielnicki, <br>former mechanical constructor, <br>future web developer.</h1>
-    </div>
-
-    <div class="about" id="about">
-        <h2>My former experience advantages:</h2>
-        <div class="adv1">
-            <h3>Software Documentation</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, omnis.</p>
+    <main>
+        <div class="container home" id="home">
+            <h1>Hello,<br> I'm Bartek Mogielnicki, <br>former mechanical constructor, <br>future web developer.</h1>
         </div>
-        <div class="adv2">
-            <h3>Projects Workflow</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, omnis.</p>
+
+        <div class="container about hide" id="about">
+            <h2>My former experience advantages:</h2>
+            <div class="adv1">
+                <h3>Software Documentation</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, omnis.</p>
+            </div>
+            <div class="adv2">
+                <h3>Projects Workflow</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, omnis.</p>
+            </div>
+            <div class="adv3">
+                <h3>Team Play</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, omnis.</p>
+            </div>
         </div>
-        <div class="adv3">
-            <h3>Team Play</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, omnis.</p>
-        </div>
-    </div>
 
-    <div class="portfolio" id="portfolio"></div>
+        <div class="container portfolio hide" id="portfolio"></div>
 
-    <div class="contact" id="contact"></div>
-
+        <div class="container contact hide" id="contact"></div>
+    </main>
     <script src="script.js"></script>
 </body>
 
