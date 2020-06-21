@@ -8,6 +8,7 @@
 
 :root {
     --nav-height: 75px;
+    --main-color: #04C6FE;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 0 10px;
     overflow: hidden;
 }
 
@@ -38,6 +40,7 @@ body {
     font-weight: bold;
     padding: 5px;
     margin-left: 15px;
+    color: var(--main-color);
 }
 
 .menu {
@@ -102,20 +105,55 @@ main {
 
 .container {
     position: absolute;
-    top: 35%;
+    top: 5%;
     left: 5%;
     color: white;
     transform: translateX(0);
     transition: .3s;
 }
 
+.container h2 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.home {
+    top: 35%;
+}
+
+.mark {
+    color: var(--main-color);
+}
+
 .hide {
     transform: translateX(2000px);
 }
 
+.advantage {
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.skills-container {
+    margin-top: 50px;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5%;
+}
+
+.skill img {
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+}
+
 .controls {
     position: absolute;
-    bottom: 2%;
+    bottom: 0;
     left: 0;
     right: 0;
     display: flex;

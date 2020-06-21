@@ -19,9 +19,6 @@ const updateDOM = () => {
     })
     container[activeSection].classList.remove('hide');
 
-    console.log(activeSection)
-    console.log(sectionsNumber)
-
     // Hide/show navigation buttons
     if (activeSection === 0) {
         goLeftBtn.classList.add('hide-btn');
