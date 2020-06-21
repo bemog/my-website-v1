@@ -13,7 +13,10 @@
 body {
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
-    background-color: #9DA65D;
+    background-image: url(/image/background2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .navigation {
@@ -25,7 +28,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #202426;
+    background-color: rgba(0, 0, 0, .4);
     color: white;
 }
 
@@ -73,12 +76,50 @@ main {
 
 .container {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 5%;
-    transform: translateY(-50%);
-    color: #202426;
+    color: white;
 }
 
 .hide {
+    display: none;
+}
+
+.controls {
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: transparent;
+    color: rgba(255, 255, 255, .2);
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.control-btn {
+    position: absolute;
+    bottom: 20px;
+    font-size: 10em;
+    margin: 0 50px;
+}
+
+.btn-go-left {
+    left: 20px;
+}
+
+.btn-go-right {
+    right: 20px;
+}
+
+.hide-btn {
     display: none;
 }
