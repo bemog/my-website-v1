@@ -2,11 +2,11 @@ const homeBtn = document.getElementById('home-btn');
 const aboutBtn = document.getElementById('about-btn');
 const portfolioBtn = document.getElementById('portfolio-btn');
 const contactBtn = document.getElementById('contact-btn');
-
 const goLeftBtn = document.getElementById('btn-go-left');
 const goRightBtn = document.getElementById('btn-go-right');
 
 const container = document.querySelectorAll('.container');
+const projects = document.querySelectorAll('.project');
 
 const contactForm = document.getElementById('contact-form');
 const nameInput = document.getElementById('name');
@@ -24,8 +24,10 @@ let activeSection = 0;
 const updateDOM = () => {
     container.forEach((section, index) => {
         if (index < activeSection) {
+            section.classList.remove('hide-right');
             section.classList.add('hide-left');
         } else {
+            section.classList.add('hide-left');
             section.classList.add('hide-right');
         };
     });
@@ -43,6 +45,12 @@ const updateDOM = () => {
         goLeftBtn.classList.remove('hide-btn');
         goRightBtn.classList.remove('hide-btn');
     };
+
+    if (activeSection === 2) {
+        projects.forEach((project) => {
+            project.classList.add('delay');
+        });
+    };
 };
 
 updateDOM();
@@ -55,7 +63,7 @@ const formVerification = (e) => {
         nameError.classList.add('show');
     } else {
         nameError.classList.remove('show');
-    }
+    };
 
     // E-mail input verification
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -69,7 +77,7 @@ const formVerification = (e) => {
         emailError.classList.add('show');
     } else {
         emailError.classList.remove('show');
-    }
+    };
 
     // Text input verification
     if (textInput.value === "") {
@@ -77,8 +85,8 @@ const formVerification = (e) => {
         textError.classList.add('show');
     } else {
         textError.classList.remove('show');
-    }
-}
+    };
+};
 
 // Next section
 const nextSection = () => {
@@ -87,7 +95,7 @@ const nextSection = () => {
         activeSection = sectionsNumber - 1;
     };
     updateDOM();
-}
+};
 
 // Previous section
 const prevSection = () => {
@@ -96,7 +104,7 @@ const prevSection = () => {
         activeSection = 0;
     };
     updateDOM();
-}
+};
 
 // Event listeners
 goRightBtn.addEventListener('click', () => {
@@ -129,12 +137,12 @@ contactBtn.addEventListener('click', () => {
 
 contactForm.addEventListener('submit', (e) => {
     formVerification(e);
-})
+});
 
 document.addEventListener('keydown', (e) => {
     if (e.keyCode === 39) {
         nextSection();
     } else if (e.keyCode === 37) {
         prevSection();
-    }
-})
+    };
+});
