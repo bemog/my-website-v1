@@ -80,21 +80,31 @@ const formVerification = (e) => {
     }
 }
 
-// Event listeners
-goRightBtn.addEventListener('click', () => {
+// Next section
+const nextSection = () => {
     activeSection++;
-    if (activeSection > sectionsNumber) {
+    if (activeSection >= sectionsNumber) {
         activeSection = sectionsNumber - 1;
     };
     updateDOM();
-});
+}
 
-goLeftBtn.addEventListener('click', () => {
+// Previous section
+const prevSection = () => {
     activeSection--;
     if (activeSection < 0) {
         activeSection = 0;
     };
     updateDOM();
+}
+
+// Event listeners
+goRightBtn.addEventListener('click', () => {
+    nextSection();
+});
+
+goLeftBtn.addEventListener('click', () => {
+    prevSection();
 });
 
 homeBtn.addEventListener('click', () => {
@@ -119,4 +129,12 @@ contactBtn.addEventListener('click', () => {
 
 contactForm.addEventListener('submit', (e) => {
     formVerification(e);
+})
+
+document.addEventListener('keydown', (e) => {
+    if (e.keyCode === 39) {
+        nextSection();
+    } else if (e.keyCode === 37) {
+        prevSection();
+    }
 })
