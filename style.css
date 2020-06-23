@@ -28,34 +28,28 @@ body {
     left: 0;
     right: 0;
     height: var(--nav-height);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: rgba(0, 0, 0, .4);
     color: white;
 }
 
 .logo {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
     font-size: 2em;
     font-weight: bold;
-    padding: 5px;
     margin-left: 15px;
     color: var(--main-color);
 }
 
 .menu {
+    margin: 15px auto;
     padding: 5px;
     width: 40%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid rgba(255, 255, 255, .5);
-    border-radius: 5px;
-}
-
-.social {
-    padding: 5px;
-    margin-right: 15px;
     border: 1px solid rgba(255, 255, 255, .5);
     border-radius: 5px;
 }
@@ -66,7 +60,7 @@ a {
 }
 
 .menu a,
-.social a {
+.social i {
     font-size: 1.5em;
     margin: 0 10px;
 }
@@ -120,6 +114,10 @@ main {
 .home {
     position: relative;
     top: 35%;
+}
+
+.home h1 {
+    text-shadow: 5px 5px 2px black;
 }
 
 .mark {
@@ -233,6 +231,7 @@ textarea:focus {
     margin-top: 20px;
     border: 1px solid rgba(255, 255, 255, .5);
     border-radius: 5px;
+    box-shadow: 0 0 10px 3px black;
 }
 
 .project img {
@@ -300,4 +299,28 @@ form textarea {
 
 .error.show {
     opacity: 1;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.social {
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr .5fr .5fr;
+    justify-items: center;
+    align-items: center;
+    line-height: 40px;
+    color: rgba(255, 255, 255, .5)
+}
+
+.social i {
+    font-size: 1.3em;
+    vertical-align: -2px;
+    color: rgba(255, 255, 255, .5)
 }

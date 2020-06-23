@@ -49,6 +49,7 @@ updateDOM();
 
 // Contact form verification
 const formVerification = (e) => {
+    // Name input verification
     if (nameInput.value === "") {
         e.preventDefault();
         nameError.classList.add('show');
@@ -56,7 +57,7 @@ const formVerification = (e) => {
         nameError.classList.remove('show');
     }
 
-    // E-mail verification expression
+    // E-mail input verification
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if (emailInput.value === "") {
@@ -70,6 +71,7 @@ const formVerification = (e) => {
         emailError.classList.remove('show');
     }
 
+    // Text input verification
     if (textInput.value === "") {
         e.preventDefault();
         textError.classList.add('show');
