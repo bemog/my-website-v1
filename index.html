@@ -124,21 +124,24 @@
 
         <div class="container contact hide-right" id="contact">
             <h2>Contact</h2>
-            <form action="https://submit-form.com/NdrwU37nMQtqNFa8Cy_Ji">
+            <form id="contact-form" action="https://submit-form.com/NdrwU37nMQtqNFa8Cy_Ji">
                 <input type="checkbox" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off" />
                 <div>
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name..." />
+                    <input type="text" name="name" id="name" placeholder="Enter your name..." maxlength="50" />
+                    <small class="error" id="name-error">Please enter your name</small>
                 </div>
                 <div>
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" placeholder="Enter your email address..." />
+                    <input type="text" name="email" id="email" placeholder="Enter your email address..." />
+                    <small class="error" id="email-error">Please enter your e-mail address</small>
                 </div>
                 <div>
                     <label for="text">Message</label>
                     <textarea name="text" id="text" placeholder="Enter your message..."></textarea>
+                    <small class="error" id="text-error">Please enter your message</small>
                 </div>
-                <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
+                <button type="submit" class="submit-btn">Submit</button>
             </form>
         </div>
 
