@@ -1,6 +1,12 @@
+@import 'config';
+
+
 $primary-color: #04C6FE;
 
 body {
     background-color: $primary-color;
     color: white;
 }
+
+
+@import 'mobile';
