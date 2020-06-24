@@ -46,7 +46,7 @@ const formVerification = (e) => {
 menuBtn.addEventListener('click', () => {
     menu.classList.toggle('show');
     menuBtn.classList.toggle('close');
-})
+});
 
 contactForm.addEventListener('submit', (e) => {
     formVerification(e);
