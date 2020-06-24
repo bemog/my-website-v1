@@ -4,12 +4,16 @@
   padding: 0;
   box-sizing: border-box; }
 
-body {
-  min-height: 100vh;
-  background-image: url(/dist/img/background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "Open sans", sans-serif; }
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; }
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 0; }
 
 li {
   list-style: none; }
@@ -17,6 +21,13 @@ li {
 a {
   text-decoration: none;
   color: white; }
+
+body {
+  min-height: 100vh;
+  background-image: url(/dist/img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Open sans", sans-serif; }
 
 .navigation {
   display: flex;
@@ -99,7 +110,8 @@ a {
   .container.about {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    font-size: 1.2em; }
     .container.about h3 {
       margin-bottom: 10px; }
     .container.about .skills-container .skills {
@@ -131,6 +143,52 @@ a {
         .container.portfolio .projects-container .project img {
           width: 300px;
           height: 200px; }
+  .container.contact {
+    padding-top: 60px; }
+    .container.contact form {
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      width: 400px;
+      justify-content: space-around;
+      align-items: center; }
+      .container.contact form div {
+        width: 100%;
+        font-size: 1.3em; }
+        .container.contact form div label {
+          display: block;
+          margin-bottom: 5px; }
+        .container.contact form div input,
+        .container.contact form div textarea {
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          font-size: .7em; }
+        .container.contact form div textarea {
+          resize: vertical;
+          height: 100px;
+          font-family: "Open sans", sans-serif; }
+        .container.contact form div .error {
+          color: red;
+          opacity: 0; }
+          .container.contact form div .error.show {
+            opacity: 1; }
+      .container.contact form .submit-btn {
+        margin-top: 20px;
+        background-color: #04C6FE;
+        width: 150px;
+        font-size: 1rem; }
+    .container.contact .contact-info {
+      margin-top: 200px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      color: #ddd; }
+      .container.contact .contact-info i {
+        font-size: 1.5rem;
+        vertical-align: text-bottom;
+        margin-right: 5px; }
 
 .footer {
   height: 40px;
@@ -139,8 +197,3 @@ a {
   line-height: 40px;
   background-color: rgba(0, 0, 0, 0.4);
   color: rgba(255, 255, 255, 0.4); }
-
-button:focus,
-input:focus,
-textarea:focus {
-  outline: 0; }

@@ -1,10 +1,5 @@
 @import 'config';
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import 'utility';
 
 body {
     min-height: 100vh;
@@ -12,15 +7,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: $main-font;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: white;
 }
 
 .navigation {
@@ -142,6 +128,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        font-size: 1.2em;
 
         h3 {
             margin-bottom: 10px;
@@ -193,6 +180,74 @@ a {
             }
         }
     }
+
+    &.contact {
+        padding-top: 60px;
+
+        form {
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+            width: 400px;
+            justify-content: space-around;
+            align-items: center;
+
+            div {
+                width: 100%;
+                font-size: 1.3em;
+
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-size: .7em;
+                }
+
+                textarea {
+                    resize: vertical;
+                    height: 100px;
+                    font-family: $main-font;
+                }
+
+                .error {
+                    color: red;
+                    opacity: 0;
+
+                    &.show {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .submit-btn {
+                margin-top: 20px;
+                background-color: $primary-color;
+                width: 150px;
+                font-size: 1rem;
+            }
+        }
+
+        .contact-info {
+            margin-top: 200px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            color: #ddd;
+
+            i {
+                font-size: 1.5rem;
+                vertical-align: text-bottom;
+                margin-right: 5px;
+            }
+        }
+    }
 }
 
 .footer {
@@ -202,12 +257,6 @@ a {
     line-height: 40px;
     background-color: rgba(0, 0, 0, .4);
     color: rgba(255, 255, 255, .4)
-}
-
-button:focus,
-input:focus,
-textarea:focus {
-    outline: 0;
 }
 
 @import 'mobile';
