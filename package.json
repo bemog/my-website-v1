@@ -1,0 +1,22 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "Portfolio website v1",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BartlomiejMogielnicki/my-website-v1.git"
+  },
+  "author": "Bartek Mogielnicki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BartlomiejMogielnicki/my-website-v1/issues"
+  },
+  "homepage": "https://github.com/BartlomiejMogielnicki/my-website-v1#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
