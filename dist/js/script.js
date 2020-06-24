@@ -1,3 +1,16 @@
+const menuBtn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu-nav-container');
+
+
+// Event listeners
+menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    menuBtn.classList.toggle('close');
+})
+
+
+
+/*
 const homeBtn = document.getElementById('home-btn');
 const aboutBtn = document.getElementById('about-btn');
 const portfolioBtn = document.getElementById('portfolio-btn');
@@ -146,3 +159,5 @@ document.addEventListener('keydown', (e) => {
         prevSection();
     };
 });
+
+*/
