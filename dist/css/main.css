@@ -223,6 +223,20 @@ body {
     transform: translateX(0); } }
 
 @media screen and (max-width: 530px) {
+  .container {
+    margin-top: 50px; }
+    .container h2 {
+      font-size: 1.5rem; }
+    .container div {
+      margin-top: 20px; }
+    .container.about p {
+      font-size: 1rem;
+      text-align: justify; }
+    .container .skills-container .skills {
+      margin-top: 10px;
+      margin-bottom: 40px; }
+      .container .skills-container .skills .skill img {
+        width: 50px; }
   .logo.move {
     transform: translateY(100%); }
   .home h1 {
