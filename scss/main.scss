@@ -16,7 +16,7 @@ body {
     .logo {
         margin-left: 10px;
         font-size: 2.5rem;
-        z-index: 1;
+        z-index: 100;
         transition: .3s;
     }
 
@@ -60,9 +60,10 @@ body {
         margin: 0 auto;
         width: 100%;
         height: $nav-height;
-        background-color: rgba(0, 0, 0, .4);
+        background-color: #222;
         transform: translateY(-100%);
         transition: .3s;
+        z-index: 99;
 
         &.show {
             transform: translateY(0);
@@ -159,14 +160,16 @@ body {
     }
 
     &.portfolio {
-        padding-top: 60px;
+        padding-top: 40px;
         overflow-x: hidden;
+        margin-bottom: 20px;
 
         .projects-container {
             margin-top: 20px;
             display: grid;
             grid-template-rows: repeat(3, 1fr);
             grid-gap: 20px;
+            width: 100%;
 
             .project {
                 display: grid;
