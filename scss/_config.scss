@@ -4,3 +4,27 @@ $primary-color: #04C6FE;
 $main-font: 'Open sans',
 sans-serif;
 $nav-height: 60px;
+
+@mixin mediaSmall {
+    @media screen and (max-width: 530px) {
+        @content;
+    }
+}
+
+@mixin mediaMedium {
+    @media screen and (min-width: 531px) {
+        @content;
+    }
+}
+
+@mixin mediaBig {
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin mediaLarge {
+    @media screen and (min-width: 1025px) {
+        @content;
+    }
+}

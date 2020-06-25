@@ -1,5 +1,6 @@
 const menuBtn = document.getElementById('menu-btn');
 const menu = document.getElementById('menu-nav-container');
+const logo = document.getElementById('logo');
 
 const contactForm = document.getElementById('contact-form');
 const nameInput = document.getElementById('name');
@@ -43,11 +44,16 @@ const formVerification = (e) => {
 };
 
 // Event listeners
+// Show/hide menu
 menuBtn.addEventListener('click', () => {
     menu.classList.toggle('show');
     menuBtn.classList.toggle('close');
+    logo.classList.toggle('move');
 });
 
-contactForm.addEventListener('submit', (e) => {
-    formVerification(e);
-});
+// Submit contact form
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        formVerification(e);
+    });
+};
