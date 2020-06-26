@@ -2,6 +2,7 @@
 
     .container {
         margin-top: 30px;
+        min-height: calc(100vh - 65px - #{$nav-height});
 
         h2 {
             font-size: 1.5rem;
@@ -12,8 +13,7 @@
         }
 
         &.about {
-
-            margin-top: 70px;
+            margin-top: 30px;
 
             p {
                 font-size: 1rem;
@@ -36,15 +36,18 @@
 
         &.portfolio {
             .projects-container {
+
+                margin-bottom: 20px;
+
                 .project {
                     margin: 0 auto;
-                    width: 300px;
+                    width: 90%;
                     display: block;
                     text-align: center;
                     padding-bottom: 20px;
 
                     img {
-                        // width: 100%;
+                        width: 100%;
                     }
 
                     .project-info {
@@ -56,10 +59,12 @@
                 }
             }
         }
+
     }
 
     .logo.move {
         transform: translateY(100%);
+        z-index: 1;
     }
 
     .home h1 {
@@ -67,10 +72,36 @@
     }
 }
 
+@include mediaSmallFooter {
+
+    .container {
+
+        &.contact {
+            padding-top: 40px;
+
+            form {
+                width: 90%;
+            }
+
+            .contact-info {
+                margin-top: 70px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                span,
+                div {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
 @include mediaMedium {
 
     .navigation {
-
         .menu-nav-container {
             transform: translateY(0);
 

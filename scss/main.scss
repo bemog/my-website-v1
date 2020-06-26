@@ -160,9 +160,8 @@ body {
     }
 
     &.portfolio {
-        padding-top: 40px;
+        padding-top: 60px;
         overflow-x: hidden;
-        margin-bottom: 20px;
 
         .projects-container {
             margin-top: 20px;
@@ -177,7 +176,7 @@ body {
                 grid-gap: 15px;
                 align-items: center;
                 border: 1px solid white;
-                transform: translateX(120%);
+                transform: translateX(150%);
                 animation: slide 1.5s forwards;
 
                 &:nth-child(2) {
@@ -260,16 +259,21 @@ body {
         }
 
         .contact-info {
-            margin-top: 200px;
+            margin-top: 180px;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             color: #ddd;
+            margin-bottom: 15px;
 
             i {
                 font-size: 1.5rem;
                 vertical-align: text-bottom;
                 margin-right: 5px;
+            }
+
+            a {
+                margin-left: 10px;
             }
         }
     }
@@ -286,7 +290,7 @@ body {
 
 @keyframes slide {
     0% {
-        transform: translateX(120%);
+        transform: translateX(150%);
     }
 
     100% {

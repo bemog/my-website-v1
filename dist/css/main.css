@@ -132,9 +132,8 @@ body {
         .container.about .skills-container .skills img {
           width: 75px; }
   .container.portfolio {
-    padding-top: 40px;
-    overflow-x: hidden;
-    margin-bottom: 20px; }
+    padding-top: 60px;
+    overflow-x: hidden; }
     .container.portfolio .projects-container {
       margin-top: 20px;
       display: grid;
@@ -147,7 +146,7 @@ body {
         grid-gap: 15px;
         align-items: center;
         border: 1px solid white;
-        transform: translateX(120%);
+        transform: translateX(150%);
         animation: slide 1.5s forwards; }
         .container.portfolio .projects-container .project:nth-child(2) {
           animation-delay: .5s; }
@@ -201,15 +200,18 @@ body {
         width: 150px;
         font-size: 1rem; }
     .container.contact .contact-info {
-      margin-top: 200px;
+      margin-top: 180px;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      color: #ddd; }
+      color: #ddd;
+      margin-bottom: 15px; }
       .container.contact .contact-info i {
         font-size: 1.5rem;
         vertical-align: text-bottom;
         margin-right: 5px; }
+      .container.contact .contact-info a {
+        margin-left: 10px; }
 
 .footer {
   height: 40px;
@@ -221,19 +223,20 @@ body {
 
 @keyframes slide {
   0% {
-    transform: translateX(120%); }
+    transform: translateX(150%); }
   100% {
     transform: translateX(0); } }
 
 @media screen and (max-width: 530px) {
   .container {
-    margin-top: 30px; }
+    margin-top: 30px;
+    min-height: calc(100vh - 65px - 60px); }
     .container h2 {
       font-size: 1.5rem; }
     .container div {
       margin-top: 20px; }
     .container.about {
-      margin-top: 70px; }
+      margin-top: 30px; }
       .container.about p {
         font-size: 1rem;
         text-align: justify; }
@@ -242,21 +245,41 @@ body {
       margin-bottom: 40px; }
       .container .skills-container .skills .skill img {
         width: 50px; }
-    .container.portfolio .projects-container .project {
-      margin: 0 auto;
-      width: 300px;
-      display: block;
-      text-align: center;
-      padding-bottom: 20px; }
-      .container.portfolio .projects-container .project .project-info {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center; }
+    .container.portfolio .projects-container {
+      margin-bottom: 20px; }
+      .container.portfolio .projects-container .project {
+        margin: 0 auto;
+        width: 90%;
+        display: block;
+        text-align: center;
+        padding-bottom: 20px; }
+        .container.portfolio .projects-container .project img {
+          width: 100%; }
+        .container.portfolio .projects-container .project .project-info {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center; }
   .logo.move {
-    transform: translateY(100%); }
+    transform: translateY(100%);
+    z-index: 1; }
   .home h1 {
     font-size: 1.6rem; } }
+
+@media screen and (max-width: 768px) {
+  .container.contact {
+    padding-top: 40px; }
+    .container.contact form {
+      width: 90%; }
+    .container.contact .contact-info {
+      margin-top: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .container.contact .contact-info span,
+      .container.contact .contact-info div {
+        margin-bottom: 20px; } }
 
 @media screen and (min-width: 531px) {
   .navigation .menu-nav-container {

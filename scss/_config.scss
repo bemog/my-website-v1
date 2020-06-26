@@ -11,6 +11,12 @@ $nav-height: 60px;
     }
 }
 
+@mixin mediaSmallFooter {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
 @mixin mediaMedium {
     @media screen and (min-width: 531px) {
         @content;
