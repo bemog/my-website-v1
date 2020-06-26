@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 $primary-color: #04C6FE;
-$main-font: 'Open sans',
+$main-font: 'Roboto',
 sans-serif;
-$nav-height: 60px;
+$nav-height: 50px;
+$foot-height : 40px;
 
 @mixin mediaSmall {
     @media screen and (max-width: 530px) {

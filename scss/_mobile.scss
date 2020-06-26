@@ -2,7 +2,7 @@
 
     .container {
         margin-top: 30px;
-        min-height: calc(100vh - 65px - #{$nav-height});
+        min-height: calc(100vh - #{$foot-height} - 30px - #{$nav-height});
 
         h2 {
             font-size: 1.5rem;

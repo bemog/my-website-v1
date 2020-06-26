@@ -112,7 +112,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 1100px;
-    min-height: calc(100vh - 35px - #{$nav-height});
+    min-height: calc(100vh - #{$foot-height} - #{$nav-height});
     color: white;
 
     &.home {
@@ -123,6 +123,11 @@ body {
 
     h1 {
         font-size: 2.5rem;
+        letter-spacing: 2px;
+
+        .title-text {
+            animation: blink 1s linear infinite;
+        }
     }
 
     h2 {
@@ -176,6 +181,7 @@ body {
                 grid-gap: 15px;
                 align-items: center;
                 border: 1px solid white;
+                padding-right: 10px;
                 transform: translateX(150%);
                 animation: slide 1.5s forwards;
 
@@ -211,7 +217,7 @@ body {
             display: flex;
             flex-direction: column;
             height: 400px;
-            width: 400px;
+            width: 500px;
             justify-content: space-around;
             align-items: center;
 
@@ -280,13 +286,28 @@ body {
 }
 
 .footer {
-    height: 40px;
+    height: $foot-height;
     width: 100%;
     text-align: center;
     line-height: 40px;
     background-color: rgba(0, 0, 0, .4);
     color: rgba(255, 255, 255, .4)
 }
+
+@keyframes blink {
+    0% {
+        border-right: 2px solid transparent;
+    }
+
+    50% {
+        border-right: 2px solid white;
+    }
+
+    100% {
+        border-right: 2px solid transparent;
+    }
+}
+
 
 @keyframes slide {
     0% {

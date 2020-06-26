@@ -10,6 +10,41 @@ const nameError = document.getElementById('name-error');
 const emailError = document.getElementById('email-error');
 const textError = document.getElementById('text-error');
 
+const titleText = document.getElementById('title-text');
+
+// Type in welcome title text
+const texts = ["former mechanical constructor.", "future web developer."];
+let count = 0;
+let index = 0;
+let currentText = "";
+let newText = "";
+
+if (titleText) {
+    async function type() {
+        if (count === texts.length) {
+            count = 0;
+        }
+
+        currentText = texts[count];
+        newText = currentText.slice(0, ++index);
+
+        titleText.textContent = newText;
+
+        if (newText.length === currentText.length) {
+
+            const sleep = (ms) => {
+                return new Promise(resolve => setTimeout(resolve, ms))
+            };
+
+            await sleep(1500);
+            count++;
+            index = 0;
+        };
+        setTimeout(type, 70);
+    };
+    type();
+}
+
 // Contact form verification
 const formVerification = (e) => {
     // Name input verification
