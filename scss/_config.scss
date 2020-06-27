@@ -5,6 +5,9 @@ $main-font: 'Roboto',
 sans-serif;
 $nav-height: 50px;
 $foot-height : 40px;
+$background-mech: url(/dist/img/backgroundmech.jpg);
+$background-dev: url(/dist/img/backgrounddev.jpg);
+
 
 @mixin mediaSmall {
     @media screen and (max-width: 530px) {
