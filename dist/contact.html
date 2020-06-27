@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ab62a01839.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.css">
+    <script src="/node_modules/swup/dist/swup.min.js" defer></script>
     <title>My Website - Contact</title>
 </head>
 
@@ -21,26 +22,26 @@
         </div>
         <div class="menu-nav-container" id="menu-nav-container">
             <ul>
-                <li>
-                    <a href="index.html">
+                <li id="home-button">
+                    <a href="/dist/index.html">
                         <span><i class="fas fa-home"></i></span>
                         <span class="title">Home</span>
                     </a>
                 </li>
                 <li>
-                    <a href="about.html">
+                    <a href="/dist/about.html">
                         <span><i class="fas fa-user-alt"></i></span>
                         <span class="title">About</span>
                     </a>
                 </li>
                 <li>
-                    <a href="portfolio.html">
+                    <a href="/dist/portfolio.html">
                         <span><i class="fas fa-briefcase"></i></span>
                         <span class="title">Projects</span>
                     </a>
                 </li>
                 <li>
-                    <a href="contact.html">
+                    <a href="/dist/contact.html">
                         <span><i class="fas fa-envelope"></i></span>
                         <span class="title">Contact</span>
                     </a>
@@ -49,7 +50,7 @@
         </div>
     </nav>
     <main>
-        <div class="container contact">
+        <div class="container contact transition-fade" id="swup">
             <h2>Contact</h2>
             <form id="contact-form" action="https://submit-form.com/NdrwU37nMQtqNFa8Cy_Ji">
                 <input type="checkbox" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off" />
@@ -68,7 +69,7 @@
                     <textarea name="text" id="text" placeholder="Enter your message..."></textarea>
                     <small class="error" id="text-error">Please enter your message</small>
                 </div>
-                <button type="submit" class="submit-btn">Send</button>
+                <button type="submit" class="submit-btn">Submit</button>
             </form>
             <div class="contact-info">
                 <span><i class="fas fa-user"></i>Bartek Mogielnicki</span>
@@ -91,7 +92,7 @@
         <span>Copyright &copy 2020r.</span>
     </footer>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>

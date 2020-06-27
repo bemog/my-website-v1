@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ab62a01839.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.css">
+    <script src="/node_modules/swup/dist/swup.min.js" defer></script>
     <title>My Website - Home</title>
 </head>
 
@@ -21,26 +22,26 @@
         </div>
         <div class="menu-nav-container" id="menu-nav-container">
             <ul>
-                <li>
-                    <a href="index.html">
+                <li id="home-button">
+                    <a href="/dist/index.html">
                         <span><i class="fas fa-home"></i></span>
                         <span class="title">Home</span>
                     </a>
                 </li>
                 <li>
-                    <a href="about.html">
+                    <a href="/dist/about.html">
                         <span><i class="fas fa-user-alt"></i></span>
                         <span class="title">About</span>
                     </a>
                 </li>
                 <li>
-                    <a href="portfolio.html">
+                    <a href="/dist/portfolio.html">
                         <span><i class="fas fa-briefcase"></i></span>
                         <span class="title">Projects</span>
                     </a>
                 </li>
                 <li>
-                    <a href="contact.html">
+                    <a href="/dist/contact.html">
                         <span><i class="fas fa-envelope"></i></span>
                         <span class="title">Contact</span>
                     </a>
@@ -49,12 +50,15 @@
         </div>
     </nav>
     <main>
-        <div class="container home">
+        <div class="container home transition-fade" id="swup">
             <h1>Welcome,<br>I am <span class="mark">Bartek
                     Mogielnicki</span>,<br><span class="title-text" id="title-text"></span><br></span></h1>
         </div>
     </main>
-    <script src="js/script.js"></script>
+    <footer class="footer">
+        <span>Copyright &copy 2020r.</span>
+    </footer>
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>

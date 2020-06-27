@@ -1,6 +1,15 @@
 @import 'utility';
 @import 'config';
 
+.transition-fade {
+    opacity: 1;
+    transition: .3s;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+
 body {
     min-height: 100vh;
     background-image: url(/dist/img/background.jpg);
