@@ -313,7 +313,8 @@ body {
   .container.contact {
     padding-top: 40px; }
     .container.contact form {
-      width: 90%; }
+      width: 90%;
+      max-width: 500px; }
     .container.contact .contact-info {
       margin-top: 70px;
       display: flex;
