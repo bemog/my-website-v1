@@ -2,7 +2,7 @@
 
     .container {
         margin-top: 30px;
-        min-height: calc(100vh - #{$foot-height} - 30px - #{$nav-height});
+        min-height: calc(100vh - #{$foot-height} - 28px - #{$nav-height});
 
         h2 {
             font-size: 1.5rem;
@@ -48,6 +48,8 @@
 
                     img {
                         width: 100%;
+                        border-top-right-radius: 10px;
+                        border-bottom-left-radius: 0;
                     }
 
                     .project-info {
@@ -124,6 +126,10 @@
 }
 
 @include mediaLarge {
+
+    body::after {
+        background-color: rgba(0, 0, 0, .2);
+    }
 
     .container {
         margin-left: 100px;

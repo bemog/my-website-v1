@@ -13,7 +13,7 @@ const textError = document.getElementById('text-error');
 const titleText = document.getElementById('title-text');
 
 // Type in welcome title text
-const texts = ["former mechanical constructor.", "future web developer."];
+const texts = ["former mechanical constructor...", "future web developer."];
 let count = 0;
 let index = 0;
 let currentText = "";

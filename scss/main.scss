@@ -8,6 +8,18 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: $main-font;
+    position: relative;
+
+    &::after {
+        content: "";
+        background-color: rgba(0, 0, 0, .4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -5;
+    }
 }
 
 .navigation {
@@ -61,7 +73,8 @@ body {
         margin: 0 auto;
         width: 100%;
         height: $nav-height;
-        background-color: rgba(0, 0, 0, .7);
+        background-color: #070604;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
         transform: translateY(-100%);
         transition: .3s;
         z-index: 99;
@@ -112,8 +125,8 @@ body {
 .container {
     margin: 0 auto;
     padding: 0 20px;
-    max-width: 1100px;
-    min-height: calc(100vh - #{$foot-height} - #{$nav-height});
+    max-width: 1000px;
+    min-height: calc(100vh - #{$foot-height} - #{$nav-height} + 2px);
     color: white;
 
     &.home {
@@ -181,9 +194,9 @@ body {
                 grid-template-columns: 1fr 1fr 2fr;
                 grid-gap: 15px;
                 align-items: center;
-                border: 1px solid white;
-                padding-right: 10px;
-                transform: translateX(150%);
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                border-radius: 10px;
+                transform: translateX(-150%);
                 animation: slide 1.5s forwards;
 
                 &:nth-child(2) {
@@ -200,11 +213,27 @@ body {
                     flex-direction: column;
                     justify-content: space-evenly;
                     align-items: center;
+
+                    a {
+                        transition: .3s;
+
+                        &:hover {
+                            transform: scale(1.2);
+                            font-weight: bold;
+                        }
+                    }
                 }
 
                 img {
                     width: 300px;
                     height: 200px;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+
+                .project-description {
+                    padding-left: 10px;
+                    padding-right: 10px;
                 }
             }
         }
@@ -312,7 +341,7 @@ body {
 
 @keyframes slide {
     0% {
-        transform: translateX(150%);
+        transform: translateX(-150%);
     }
 
     100% {
