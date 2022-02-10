@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/BartlomiejMogielnicki/my-website-v1#readme",
   "dependencies": {
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "swup": "^2.0.10"
   }
 }
